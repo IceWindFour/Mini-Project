@@ -1,3 +1,4 @@
 __pycache__
 .venv
 placeholder.txt
+.pytest_cache
