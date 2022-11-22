@@ -70,38 +70,38 @@ Courier Menu
 # courier_menu_input = Menu()
 
 def read_file():
-    with open("couriers.csv", "r") as file:
+    with open("data/couriers.csv", "r") as file:
         csvreader = csv.DictReader(file)
         for row in csvreader:
             couriers.append(row)
 
-    with open("products.csv", "r") as file:
+    with open("data/products.csv", "r") as file:
         csvreader = csv.DictReader(file)
         for row in csvreader:
             products.append(row)
 
-    with open("orders.csv") as file:
+    with open("data/orders.csv") as file:
         csvreader = csv.DictReader(file)
         for row in csvreader:
             orders.append(row)
 
 
 def write_file():
-    with open("couriers.csv", "w") as file:
+    with open("data/couriers.csv", "w") as file:
         fieldnames = ["Name", "Phone"]
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         for data in couriers:
             writer.writerow(data)
 
-    with open("products.csv", "w") as file:
+    with open("data/products.csv", "w") as file:
         fieldnames = ["Name", "Price"]
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         for data in products:
             writer.writerow(data)
 
-    with open("orders.csv", "w") as file:
+    with open("data/orders.csv", "w") as file:
         fieldnames = [
             "customer_name",
             "customer_address",
