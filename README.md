@@ -178,4 +178,4 @@ def test_update_orders(mock_input, mock_display_products_with_id, mock_display_c
 ## Meeting project requirements
 - I used pytest to ensure core functionality
 ### Testing 
-![image](https://user-images.githubusercontent.com/115299269/203525193-3c08d915-d96d-4443-9ae7-096042994297.png)
+![image](https://user-images.githubusercontent.com/115299269/203550022-67129c7e-868a-4676-9894-ca19007632be.png)
