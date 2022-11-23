@@ -31,9 +31,36 @@ The client has given me these requirements for the app.
 • Update
 • Delete
 
-## project design
+## Project Design
+The project design was lead by the requirements of the client
+
+```
+
+├── data
+│   ├── __init__.py
+│   ├── couriers.csv
+│   ├── data.db
+│   ├── database.py
+│   ├── orders.py
+│   └── products.csv
+├── src
+│   ├── __init__.py
+│   ├── dbfunctions.py
+│   └── functions.py
+├── tests
+│   ├── __init__.py
+│   ├── test_db_courier.py
+│   ├── test_db_order.py
+│   ├── test_db_product.py
+│   └── test_menu.py
+│ 
+├── .gitignore
+├── app.py
+└── README.md
+
+```
 
 ## Meeting project requirements
 - I used pytest to ensure core functionality
-
+### Testing 
 ![image](https://user-images.githubusercontent.com/115299269/203525193-3c08d915-d96d-4443-9ae7-096042994297.png)
