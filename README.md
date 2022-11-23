@@ -58,6 +58,53 @@ The project design was lead by the requirements of the client
 
 ```
 
+### Demo update 
+
+```python
+
+def add_new_order(connection):
+    customer_name = input("New Customer Name? ")
+    customer_address = input("New Customer Address? ")
+    customer_phone = input("New Customer Phone number? ")
+    display_products_with_id(connection)
+    items = input("items? ")
+    display_couriers(connection)
+    couriers = input("Courier index? ")
+    status = 1
+    if customer_name and customer_address and customer_phone:
+        database.add_order(
+            connection,
+            customer_name.title(),
+            customer_address,
+            customer_phone,
+            couriers,
+            status,
+            items,
+        )
+    display_orders(connection)
+
+```
+
+### Test demo update order
+
+```python 
+
+@patch("src.dbfunctions.display_couriers")
+@patch("src.dbfunctions.display_products_with_id")
+@patch("builtins.input", side_effect = ["1","Patrick","75 patty street","0712348238","3,1,2",4])
+def test_update_orders(mock_input, mock_display_products_with_id, mock_display_courier, setup_database):
+    cursor = setup_database
+
+    assert (1, 'John', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0789887334', 2, 1, '1,2,3') in cursor.execute(ALL_ORDERS)
+    assert (1, 'Patrick', '75 patty street', '0712348238', 4, 1, '3,1,2') not in cursor.execute(ALL_ORDERS)
+    
+    update_order(cursor)
+
+    assert (1, 'John', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0789887334', 2, 1, '1,2,3') not in cursor.execute(ALL_ORDERS)
+    assert (1, 'Patrick', '75 patty street', '0712348238', 4, 1, '3,1,2') in cursor.execute(ALL_ORDERS)
+
+```
+
 ## Meeting project requirements
 - I used pytest to ensure core functionality
 ### Testing 
