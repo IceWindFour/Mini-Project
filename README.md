@@ -91,6 +91,9 @@ def update_order(connection):
     display_orders(connection)
 
 ```
+
+### Sql function to change the order by id
+
 ```python 
 
 UPDATE_ORDER = """
