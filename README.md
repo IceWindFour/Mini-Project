@@ -7,7 +7,6 @@
 # Roadmap
 
 - [x] Week 1
-<details>
 <br>
 As a user I want to:
 <ul>
@@ -18,9 +17,7 @@ As a user I want to:
 <li>A product should just be a string containing its name, i.e: "Coke Zero"</li>
 <li>A list of products should be a list of strings , i.e: ["Coke Zero"]</li>
 </ul>
-</details>
 <br>
-<details>
 
 - [x] Week 2
 <br>
@@ -45,9 +42,7 @@ As a user I want to:
 
 <li>A list of orders should be a list of dicts, i.e: [{...}.{...}]</li>
 </ul>
-</details>
 <br>
-<details>
   
 - [x] Week 3
 <br>
@@ -84,9 +79,7 @@ Claire
 ```
 
 </ul>
-</details>
 <br>
-<details>
   
 - [ ] Week 4
 <br>
@@ -137,9 +130,7 @@ John,"Unit 2, 12 Main Street, LONDON, WH1 2ER",2,preparing,"1,3,4"
 ```
 
 </ul>
-</details>
 <br>
-<details>
 
 - [x] Week 5
 <br>
@@ -195,9 +186,7 @@ John,"Unit 2, 12 Main Street, LONDON, WH1 2ER",2,preparing,"1,3,4"
 ```
 
 </ul>
-</details>
 <br>
-<details>
 
 - [x] Week 6
 <br>
