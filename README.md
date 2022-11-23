@@ -6,7 +6,7 @@
 
 # Roadmap
 
-### Week 1
+## Week 1
 <br>
 As a user I want to:
 <ul>
@@ -19,7 +19,7 @@ As a user I want to:
 </ul>
 <br>
 
-- [x] Week 2
+## Week 2
 <br>
 As a user I want to:
 <ul>
@@ -44,7 +44,7 @@ As a user I want to:
 </ul>
 <br>
   
-- [x] Week 3
+## Week 3
 <br>
 As a user I want to:
 <ul>
@@ -81,7 +81,7 @@ Claire
 </ul>
 <br>
   
-- [ ] Week 4
+## Week 4
 <br>
 As a user I want to:
 <ul>
@@ -132,7 +132,7 @@ John,"Unit 2, 12 Main Street, LONDON, WH1 2ER",2,preparing,"1,3,4"
 </ul>
 <br>
 
-- [x] Week 5
+## Week 5
 <br>
 As a user I want to:
 <ul>
@@ -188,7 +188,7 @@ John,"Unit 2, 12 Main Street, LONDON, WH1 2ER",2,preparing,"1,3,4"
 </ul>
 <br>
 
-- [x] Week 6
+## Week 6
 <br>
 As a user I want to:
 <ul>
