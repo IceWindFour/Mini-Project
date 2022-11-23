@@ -181,9 +181,11 @@ def test_update_orders(mock_input, mock_display_products_with_id, mock_display_c
 
 ## If you had more time, what is one thing you would improve upon?
 - Compeleted the read me :)
+- Make the prints formatted nicely
 - Add error handling 
 - Clean up the code, making it more presentable
 - More test coverage
+- Make my code changeable
 
 ## What did you most enjoy implementing?
 - I enjoyed implementing the core functionality and seeing the program actually work
