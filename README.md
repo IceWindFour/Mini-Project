@@ -172,6 +172,9 @@ def test_update_orders(mock_input, mock_display_products_with_id, mock_display_c
 
 ```
 
+![image](https://user-images.githubusercontent.com/115299269/203549828-a6e7d219-c747-4ffd-90ee-b0334f38ce0d.png)
+
+
 ## Meeting project requirements
 - I used pytest to ensure core functionality
 ### Testing 
