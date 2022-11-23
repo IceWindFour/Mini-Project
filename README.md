@@ -1,11 +1,13 @@
-# hi :)
+# Mini Project Cafe CLI 
 
-Requires csv files to run working on a solution
+## Project Background
 
-# Requirements
+## Client requirements
 
+# Roadmap
+
+- [x] Week 1
 <details>
-<summary>Week 1</summary>
 <br>
 As a user I want to:
 <ul>
@@ -19,7 +21,8 @@ As a user I want to:
 </details>
 <br>
 <details>
-<summary>Week 2</summary>
+
+- [x] Week 2
 <br>
 As a user I want to:
 <ul>
@@ -45,7 +48,8 @@ As a user I want to:
 </details>
 <br>
 <details>
-<summary>Week 3</summary>
+  
+- [x] Week 3
 <br>
 As a user I want to:
 <ul>
@@ -83,7 +87,8 @@ Claire
 </details>
 <br>
 <details>
-<summary>Week 4</summary>
+  
+- [ ] Week 4
 <br>
 As a user I want to:
 <ul>
@@ -135,7 +140,8 @@ John,"Unit 2, 12 Main Street, LONDON, WH1 2ER",2,preparing,"1,3,4"
 </details>
 <br>
 <details>
-<summary>Week 5</summary>
+
+- [x] Week 5
 <br>
 As a user I want to:
 <ul>
@@ -192,7 +198,8 @@ John,"Unit 2, 12 Main Street, LONDON, WH1 2ER",2,preparing,"1,3,4"
 </details>
 <br>
 <details>
-<summary>Week 6</summary>
+
+- [x] Week 6
 <br>
 As a user I want to:
 <ul>
