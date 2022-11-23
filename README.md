@@ -176,3 +176,13 @@ def test_update_orders(mock_input, mock_display_products_with_id, mock_display_c
 - I used pytest to ensure core functionality
 ### Testing 
 ![image](https://user-images.githubusercontent.com/115299269/203525193-3c08d915-d96d-4443-9ae7-096042994297.png)
+
+## If you had more time, what is one thing you would improve upon?
+
+## What did you most enjoy implementing?
+
+## Acknowledgments
+
+* Patrick
+* Carlton
+* Numan & Nayan (testing dream team)
