@@ -171,11 +171,13 @@ def test_update_orders(mock_input, mock_display_products_with_id, mock_display_c
     assert Patricks_order in cursor.execute(ALL_ORDERS)
 
 ```
+![image](https://user-images.githubusercontent.com/115299269/203553121-fb36beb9-d4a2-4c73-967c-6a9610f08c9a.png)
+
 
 ## Meeting project requirements
 - I used pytest to ensure core functionality
 ### Testing 
-![image](https://user-images.githubusercontent.com/115299269/203525193-3c08d915-d96d-4443-9ae7-096042994297.png)
+![image](https://user-images.githubusercontent.com/115299269/203553101-a932daf6-f714-4b39-aad9-166281118f7b.png)
 
 ## If you had more time, what is one thing you would improve upon?
 
