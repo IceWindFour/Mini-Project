@@ -73,11 +73,4 @@ def test_delete_product(mock_input, setup_database):
 
     assert (5, "Milk", 2.0) not in cursor.execute(ALL_PRODUCTS)
     assert len(list(cursor.execute(ALL_PRODUCTS))) == 6
-
-
-
-
-
-
-
     
