@@ -65,41 +65,63 @@ The project design was lead by the requirements of the client
 connection = database.connect()
 database.create_tables(connection)
 
-def add_new_order(connection):
-    customer_name = input("New Customer Name? ")
-    customer_address = input("New Customer Address? ")
-    customer_phone = input("New Customer Phone number? ")
+def update_order(connection):
+    display_orders(connection)
+    id = input("order id? ")
+    order_id = database.get_orders_by_id(connection, id)
+    for order in order_id:
+        print(order)
+    new_customer_name = input("New customer name? ")
+    new_customer_address = input("New customer address? ")
+    new_customer_phone = input("New customer phone number? ")
     display_products_with_id(connection)
     items = input("items? ")
     display_couriers(connection)
-    couriers = input("Courier index? ")
-    status = 1
-    if customer_name and customer_address and customer_phone:
-        database.add_order(
+    couriers = input("New Courier index? ")
+    if new_customer_name and new_customer_address and new_customer_phone:
+        database.update_order(
             connection,
-            customer_name.title(),
-            customer_address,
-            customer_phone,
+            new_customer_name,
+            new_customer_address,
+            new_customer_phone,
             couriers,
-            status,
             items,
+            id,
         )
     display_orders(connection)
 
 ```
 ```python 
 
-INSERT_ORDER = """INSERT INTO orders
-(customer_name,customer_address,customer_phone,courier,status,items)
-VALUES (?,?,?,?,?,?);"""
+UPDATE_ORDER = """
+UPDATE orders
+SET customer_name = ?,
+customer_address = ?,
+customer_phone = ?,
+courier = ?,
+items = ?
+WHERE id = ?;"""
 
-def add_order(
-    connection, customer_name, customer_address, customer_phone, courier, status, items
+def update_order(
+    connection,
+    new_customer_name,
+    new_customer_address,
+    new_customer_phone,
+    courier,
+    items,
+    id,
 ):
     with connection:
         connection.execute(
-            INSERT_ORDER,
-            (customer_name, customer_address, customer_phone, courier, status, items),
+            UPDATE_ORDER,
+            (
+                new_customer_name,
+                new_customer_address,
+                new_customer_phone,
+                courier,
+                items,
+                id,
+            ),
         )
 ```
 
