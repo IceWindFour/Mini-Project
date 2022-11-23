@@ -26,10 +26,10 @@ The client has given me these requirements for the app.
 - Data persistence using SQlite3
 - Unit and integration testing with pytest
 - Implemented CRUD operations
-  Create
-  Read
-  Update
-  Delete
+• Create
+• Read
+• Update
+• Delete
 
 ## project design
 
