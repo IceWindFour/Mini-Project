@@ -67,6 +67,7 @@ DELETE_ORDER_BY_ID = "DELETE FROM orders WHERE Id = ?;"
 def connect():
     return sqlite3.connect("data/data.db")
 
+
 def create_tables(connection):
     with connection:
         connection.execute(CREATE_PRODUCTS_TABLE)
@@ -74,51 +75,84 @@ def create_tables(connection):
         connection.execute(CREATE_ORDERS_TABLE)
         connection.execute(CREATE_ORDER_STATUS_TABLE)
 
+
 def add_courier(connection, name, phone):
     with connection:
         connection.execute(INSERT_COURIER, (name, phone))
+
 
 def add_product(connection, name, price):
     with connection:
         connection.execute(INSERT_PRODUCT, (name, price))
 
+
 def add_order_status(connection, order_status):
     with connection:
-        connection.execute(INSERT_ORDER_STATUS,(order_status,))
+        connection.execute(INSERT_ORDER_STATUS, (order_status,))
 
-def add_order(connection,customer_name,customer_address,customer_phone,courier,status,items):
-    with connection:
-        connection.execute(INSERT_ORDER, (customer_name,customer_address,customer_phone,courier,status,items))
 
-def update_product(connection,new_name,name_price,id):
+def add_order(
+    connection, customer_name, customer_address, customer_phone, courier, status, items
+):
     with connection:
-        connection.execute(UPDATE_PRODUCT, (new_name,name_price,id))
+        connection.execute(
+            INSERT_ORDER,
+            (customer_name, customer_address, customer_phone, courier, status, items),
+        )
 
-def update_courier(connection,new_name,new_phone,id):
-    with connection:
-        connection.execute(UPDATE_COURIER, (new_name,new_phone,id))
 
-def update_order(connection,new_customer_name,new_customer_address,
-    new_customer_phone,courier,items, id):
+def update_product(connection, new_name, name_price, id):
     with connection:
-        connection.execute(UPDATE_ORDER,(new_customer_name,
-            new_customer_address,new_customer_phone,courier,items, id))
+        connection.execute(UPDATE_PRODUCT, (new_name, name_price, id))
+
+
+def update_courier(connection, new_name, new_phone, id):
+    with connection:
+        connection.execute(UPDATE_COURIER, (new_name, new_phone, id))
+
+
+def update_order(
+    connection,
+    new_customer_name,
+    new_customer_address,
+    new_customer_phone,
+    courier,
+    items,
+    id,
+):
+    with connection:
+        connection.execute(
+            UPDATE_ORDER,
+            (
+                new_customer_name,
+                new_customer_address,
+                new_customer_phone,
+                courier,
+                items,
+                id,
+            ),
+        )
+
 
 def update_order_status(connection, new_status, id):
     with connection:
-        connection.execute(UPDATE_ORDER_STATUS, (new_status,id))
+        connection.execute(UPDATE_ORDER_STATUS, (new_status, id))
+
 
 def get_all_products(connection):
     with connection:
         return connection.execute(GET_ALL_PRODUCTS).fetchall()
 
+
 def get_all_couriers(connection):
     with connection:
         return connection.execute(GET_ALL_COURIERS).fetchall()
 
+
 def get_all_orders(connection):
     with connection:
         return connection.execute(GET_ALL_ORDERS).fetchall()
+
 
 def get_all_orders_status(connection):
     with connection:
@@ -129,32 +163,41 @@ def get_products_by_name(connection, name):
     with connection:
         return connection.execute(GET_PRODUCTS_BY_NAME, (name,)).fetchall()
 
+
 def get_products_by_id(connection, name):
     with connection:
         return connection.execute(GET_PRODUCTS_BY_ID, (name,)).fetchall()
+
+
 def get_couriers_by_id(connection, name):
     with connection:
         return connection.execute(GET_COURIERS_BY_ID, (name,)).fetchall()
+
 
 def get_orders_by_id(connection, name):
     with connection:
         return connection.execute(GET_ORDERS_BY_ID, (name,)).fetchall()
 
+
 def get_products_by_price(connection):
     with connection:
         return connection.execute(GET_PRODUCTS_BY_PRICE).fetchall()
+
 
 def delete_product(connection, name):
     with connection:
         connection.execute(DELETE_PRODUCT, (name,))
 
+
 def delete_product_by_id(connection, id):
     with connection:
         connection.execute(DELETE_PRODUCT_BY_ID, (id,))
 
+
 def delete_courier_by_id(connection, id):
     with connection:
         connection.execute(DELETE_COURIER_BY_ID, (id,))
+
 
 def delete_order_by_id(connection, id):
     with connection:
