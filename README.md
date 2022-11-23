@@ -132,6 +132,27 @@ def update_order(
 
 ```python 
 
+@pytest.fixture
+def setup_database():
+    connection = sqlite3.connect(':memory:')
+    cursor = connection.cursor()
+    cursor.execute('''
+	    CREATE TABLE orders
+        (id integer PRIMARY KEY, 
+        customer_name text,
+        customer_address text,
+        customer_phone text,
+        courier integer,
+        status integer,
+        items text)''')
+    sample_data = [
+        (1, 'John', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0789887334', 2, 1, '1,2,3'),
+        (2, 'Timmy', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0712345646', 3, 1, '2,4,6'),
+        (3, 'Sheikh', 'Blue Street E1 123', '07969696969', 7, 3, '11,12,15')
+    ]
+    cursor.executemany('INSERT INTO orders VALUES(?, ?, ?, ?, ?, ?, ?)', sample_data)
+    return connection
+
 @patch("src.dbfunctions.display_couriers")
 @patch("src.dbfunctions.display_products_with_id")
 @patch("builtins.input", side_effect = ["1","Patrick","75 patty street","0712348238","3,1,2",4])
