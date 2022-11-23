@@ -6,21 +6,21 @@
 ## Client requirements
 The client has given me these requirements for the app. 
 
-• I want to maintain a collection of products and couriers.
+- I want to maintain a collection of products and couriers.
 
-• When a customer makes a new order, I need to create this on the
+- When a customer makes a new order, I need to create this on the
   system.
 
-• I need to be able to update the status of an order i.e: preparing,
+- I need to be able to update the status of an order i.e: preparing,
   out-for-delivery, delivered.
 
-• When I exit my app, I need all data to be persisted and not lost.
+- When I exit my app, I need all data to be persisted and not lost.
 
-• When I start my app, I need to load all persisted data.
+- When I start my app, I need to load all persisted data.
 
-• I need to be sure my app has been tested and proven to work well.
+- I need to be sure my app has been tested and proven to work well.
 
-• I need to receive regular software updates
+- I need to receive regular software updates
 
 ## Current Features
 - Data persistence using SQlite3
