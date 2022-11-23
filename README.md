@@ -58,7 +58,7 @@ The project design was lead by the requirements of the client
 
 ```
 
-### Demo update 
+### Demo update order
 
 ```python
 
@@ -83,6 +83,19 @@ def add_new_order(connection):
         )
     display_orders(connection)
 
+```
+```python 
+
+INSERT_ORDER = "INSERT INTO orders (customer_name,customer_address,customer_phone,courier,status,items) VALUES (?,?,?,?,?,?);"
+
+def add_order(
+    connection, customer_name, customer_address, customer_phone, courier, status, items
+):
+    with connection:
+        connection.execute(
+            INSERT_ORDER,
+            (customer_name, customer_address, customer_phone, courier, status, items),
+        )
 ```
 
 ### Test demo update order
