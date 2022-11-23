@@ -36,8 +36,4 @@ The client has given me these requirements for the app.
 ## Meeting project requirements
 - I used pytest to ensure core functionality
 
-[image.png]
-
-image.png
-
-  image.png
+![image](https://user-images.githubusercontent.com/115299269/203525193-3c08d915-d96d-4443-9ae7-096042994297.png)
