@@ -69,6 +69,7 @@ Courier Menu
 # order_menu_input = Menu()
 # courier_menu_input = Menu()
 
+
 def read_file():
     with open("data/couriers.csv", "r") as file:
         csvreader = csv.DictReader(file)
@@ -181,9 +182,11 @@ def delete_product():
         if confirm == 1:
             products.pop(int(delete_product))
 
+
 def order_print():
     for i in orders:
         print(i)
+
 
 # dosen't meet spec fully
 def customer_inputs():
@@ -277,9 +280,11 @@ def delete_order():
         if confirm == 1:
             del orders[int(delete_order)]
 
+
 def courier_print():
     for courier in couriers:
         print(courier)
+
 
 def new_courier():
     new_courier = input("New Courier? ")

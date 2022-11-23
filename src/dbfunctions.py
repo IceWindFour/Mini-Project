@@ -1,11 +1,13 @@
 import data.database as database
 
+
 def display_products(connection):
     products = database.get_all_products(connection)
 
     print("Products: Price\n")
     for product in products:
         print(f"{product[1]}: ${product[2]:.2f}")
+
 
 def display_products_unchanged(connection):
     products = database.get_all_products(connection)
@@ -21,11 +23,13 @@ def display_products_with_id(connection):
     for product in products:
         print(f"id){product[0]} {product[1]}: ${product[2]:.2f}")
 
+
 def add_new_product(connection):
     name = input("Enter New Product Name: ")
     price = input("Enter New Product Price: ")
     if name and price:
         database.add_product(connection, name.title(), price)
+
 
 def update_product(connection):
     display_products_with_id(connection)
@@ -38,6 +42,7 @@ def update_product(connection):
     if new_name and new_price:
         database.update_product(connection, new_name.title(), new_price, id)
     display_products(connection)
+
 
 def delete_product(connection):
     display_products_with_id(connection)
@@ -54,11 +59,13 @@ def display_couriers(connection):
     for courier in couriers:
         print(courier)
 
+
 def add_new_courier(connection):
     name = input("Enter New Courier Name: ")
     phone = input("Enter New Courier Phone Number: ")
     if name and phone:
         database.add_courier(connection, name.title(), phone)
+
 
 def update_courier(connection):
     display_couriers(connection)
@@ -72,6 +79,7 @@ def update_courier(connection):
         database.update_courier(connection, new_name.title(), new_phone, id)
     display_couriers(connection)
 
+
 def delete_courier(connection):
     display_couriers(connection)
     id = input("Courier Id? ")
@@ -81,17 +89,21 @@ def delete_courier(connection):
     database.delete_courier_by_id(connection, id)
     display_couriers(connection)
 
-#*****************************************************
+
+# *****************************************************
+
 
 def display_orders(connection):
     orders = database.get_all_orders(connection)
     for order in orders:
         print(order)
 
+
 def display_order_status(connection):
     orders = database.get_all_orders_status(connection)
     for order in orders:
         print(order)
+
 
 def add_new_order(connection):
     customer_name = input("New Customer Name? ")
@@ -103,9 +115,17 @@ def add_new_order(connection):
     couriers = input("Courier index? ")
     status = 1
     if customer_name and customer_address and customer_phone:
-        database.add_order(connection, customer_name.title(),
-        customer_address, customer_phone, couriers, status, items)
+        database.add_order(
+            connection,
+            customer_name.title(),
+            customer_address,
+            customer_phone,
+            couriers,
+            status,
+            items,
+        )
     display_orders(connection)
+
 
 def update_order_status(connection):
     display_orders(connection)
@@ -117,6 +137,7 @@ def update_order_status(connection):
     new_status = input("new order status? ")
     database.update_order_status(connection, new_status, id)
     display_orders(connection)
+
 
 def update_order(connection):
     display_orders(connection)
@@ -132,9 +153,17 @@ def update_order(connection):
     display_couriers(connection)
     couriers = input("New Courier index? ")
     if new_customer_name and new_customer_address and new_customer_phone:
-        database.update_order(connection,new_customer_name,new_customer_address,
-        new_customer_phone,couriers,items, id)
+        database.update_order(
+            connection,
+            new_customer_name,
+            new_customer_address,
+            new_customer_phone,
+            couriers,
+            items,
+            id,
+        )
     display_orders(connection)
+
 
 def delete_order(connection):
     display_orders(connection)
