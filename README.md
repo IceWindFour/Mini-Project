@@ -86,7 +86,9 @@ def add_new_order(connection):
 ```
 ```python 
 
-INSERT_ORDER = "INSERT INTO orders (customer_name,customer_address,customer_phone,courier,status,items) VALUES (?,?,?,?,?,?);"
+INSERT_ORDER = """INSERT INTO orders
+(customer_name,customer_address,customer_phone,courier,status,items)
+VALUES (?,?,?,?,?,?);"""
 
 def add_order(
     connection, customer_name, customer_address, customer_phone, courier, status, items
