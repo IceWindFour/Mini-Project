@@ -62,6 +62,9 @@ The project design was lead by the requirements of the client
 
 ```python
 
+connection = database.connect()
+database.create_tables(connection)
+
 def add_new_order(connection):
     customer_name = input("New Customer Name? ")
     customer_address = input("New Customer Address? ")
@@ -109,7 +112,7 @@ def add_order(
 @patch("builtins.input", side_effect = ["1","Patrick","75 patty street","0712348238","3,1,2",4])
 def test_update_orders(mock_input, mock_display_products_with_id, mock_display_courier, setup_database):
     cursor = setup_database
-    
+
     Johns_order = (1, 'John', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0789887334', 2, 1, '1,2,3')
     Patricks_order = (1, 'Patrick', '75 patty street', '0712348238', 4, 1, '3,1,2')
 
