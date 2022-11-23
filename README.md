@@ -6,7 +6,7 @@
 
 # Roadmap
 
-- [x] Week 1
+## Week 1
 <br>
 As a user I want to:
 <ul>
