@@ -53,8 +53,6 @@ The project design was lead by the requirements of the client
 │   ├── test_db_order.py
 │   ├── test_db_product.py
 │   └── test_menu.py
-│ 
-├── .gitignore
 ├── app.py
 └── README.md
 
