@@ -6,6 +6,7 @@ from src.dbfunctions import *
 # pf.read_file()
 # main_menu_input = Menu()
 
+
 def uplink():
     connection = database.connect()
     database.create_tables(connection)
@@ -38,10 +39,10 @@ def uplink():
             if order_menu_input == "0":
                 print("Returning to Main Menu")
                 main_menu_input = Menu().main_menu()
-            
+
             elif order_menu_input == "1":
                 display_orders(connection)
-                    
+
             elif order_menu_input == "2":
                 add_new_order(connection)
 
@@ -66,10 +67,10 @@ def uplink():
 
             elif courier_menu_input == "2":
                 add_new_courier(connection)
-            
+
             elif courier_menu_input == "3":
                 update_courier(connection)
-            
+
             elif courier_menu_input == "4":
                 delete_courier(connection)
 
@@ -79,5 +80,6 @@ def uplink():
         else:
             print("Not a vaild input")
             main_menu_input = Menu().main_menu()
-            
+
+
 uplink()
