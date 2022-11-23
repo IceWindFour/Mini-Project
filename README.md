@@ -30,3 +30,8 @@ The client has given me these requirements for the app.
   Read
   Update
   Delete
+
+## project design
+
+## Meeting project requirements
+- I used pytest to ensure core functionality
