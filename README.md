@@ -109,14 +109,17 @@ def add_order(
 @patch("builtins.input", side_effect = ["1","Patrick","75 patty street","0712348238","3,1,2",4])
 def test_update_orders(mock_input, mock_display_products_with_id, mock_display_courier, setup_database):
     cursor = setup_database
+    
+    Johns_order = (1, 'John', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0789887334', 2, 1, '1,2,3')
+    Patricks_order = (1, 'Patrick', '75 patty street', '0712348238', 4, 1, '3,1,2')
 
-    assert (1, 'John', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0789887334', 2, 1, '1,2,3') in cursor.execute(ALL_ORDERS)
-    assert (1, 'Patrick', '75 patty street', '0712348238', 4, 1, '3,1,2') not in cursor.execute(ALL_ORDERS)
+    assert Johns_order in cursor.execute(ALL_ORDERS)
+    assert Patricks_order not in cursor.execute(ALL_ORDERS)
     
     update_order(cursor)
 
-    assert (1, 'John', 'Unit 2, 12 Main Street, LONDON, WH1 2ER', '0789887334', 2, 1, '1,2,3') not in cursor.execute(ALL_ORDERS)
-    assert (1, 'Patrick', '75 patty street', '0712348238', 4, 1, '3,1,2') in cursor.execute(ALL_ORDERS)
+    assert Johns_order not in cursor.execute(ALL_ORDERS)
+    assert Patricks_order in cursor.execute(ALL_ORDERS)
 
 ```
 
