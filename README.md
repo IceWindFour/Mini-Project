@@ -37,3 +37,7 @@ The client has given me these requirements for the app.
 - I used pytest to ensure core functionality
 
 [image.png]
+
+image.png
+
+  image.png
